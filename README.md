@@ -4,8 +4,7 @@ In the self-assembly process which drives the formation of cellular membranes, m
 
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/8810308/137566609-c8ac5ba1-befa-4eda-a549-5ffaa9b4914a.png" width = "70%">
-  </p>
-<p align="center">
+  
   <em align="center">image_caption</em>
 </p>
 
