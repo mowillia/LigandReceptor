@@ -4,8 +4,9 @@ In the self-assembly process which drives the formation of cellular membranes, m
 
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/8810308/137566609-c8ac5ba1-befa-4eda-a549-5ffaa9b4914a.png" width = "70%">
-  <em align="center" >image_caption</em>
-  </p>
+  <br>
+  <em align="center">image_caption</em>
+</p>
 
 The above figure depicts self-assembling biomolecular dimer systems. In (a) distinct single-stranded DNA (ssDNA) strands exist in a system with their complementary strands and with other double-stranded DNA (dsDNA). In (b) transcription factors (TFs) exist in a system with their binding sites on DNA and with already bound TF-DNA dimers. Since the binding sites are embedded in the much longer strand of an entire DNA molecule, the effective DNA molecules to which the TFs bind are much less motile than the TFs. In (c) distinct protein monomers exist in a system with the heterodimers formed from them. In all systems, we consider “fully correct assembly" or “fully correct dimerization" as the state where all monomers are bound to their correct monomer or binding site.
   
