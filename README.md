@@ -2,8 +2,6 @@
 
 In the self-assembly process which drives the formation of cellular membranes, micelles, and capsids, a collection of separated subunits spontaneously binds together to form functional and more ordered structures. But we can also study self-assembly in a simpler scenario: the formation of dimers from a system of monomers.
 
-![image](https://user-images.githubusercontent.com/8810308/143513360-1df13169-f487-49a8-9f4d-db91cefbfe4a.png)
-
 
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/8810308/143513360-1df13169-f487-49a8-9f4d-db91cefbfe4a.png" width = "70%">
@@ -11,14 +9,16 @@ In the self-assembly process which drives the formation of cellular membranes, m
   <em align="center">image_caption</em>
 </p>
 
+The above figure depicts self-assembling biomolecular dimer systems. In (a) distinct single-stranded DNA (ssDNA) strands exist in a system with their complementary strands and with other double-stranded DNA (dsDNA). In (b) transcription factors (TFs) exist in a system with their binding sites on DNA and with already bound TF-DNA dimers. Since the binding sites are embedded in the much longer strand of an entire DNA molecule, the effective DNA molecules to which the TFs bind are much less motile than the TFs. In (c) distinct protein monomers exist in a system with the heterodimers formed from them. In all systems, we consider “fully correct assembly" or “fully correct dimerization" as the state where all monomers are bound to their correct monomer or binding site.
+  
+
 
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/8810308/143513407-606ec764-efaa-4820-baaf-0dbe4cd3aeef.png" width = "70%">
   <br>
   <em align="center">image_caption</em>
 </p>
-
-The above figure depicts self-assembling biomolecular dimer systems. In (a) distinct single-stranded DNA (ssDNA) strands exist in a system with their complementary strands and with other double-stranded DNA (dsDNA). In (b) transcription factors (TFs) exist in a system with their binding sites on DNA and with already bound TF-DNA dimers. Since the binding sites are embedded in the much longer strand of an entire DNA molecule, the effective DNA molecules to which the TFs bind are much less motile than the TFs. In (c) distinct protein monomers exist in a system with the heterodimers formed from them. In all systems, we consider “fully correct assembly" or “fully correct dimerization" as the state where all monomers are bound to their correct monomer or binding site.
+  
   
 The combinatorial problem at the foundation of understanding the statistical physics of such systems is 
 
