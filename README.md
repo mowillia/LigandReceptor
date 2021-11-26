@@ -1,9 +1,19 @@
-# Assembly on a Grid
+# Combinatorial model of ligand-receptor binding
 
 In the self-assembly process which drives the formation of cellular membranes, micelles, and capsids, a collection of separated subunits spontaneously binds together to form functional and more ordered structures. But we can also study self-assembly in a simpler scenario: the formation of dimers from a system of monomers.
 
+![image](https://user-images.githubusercontent.com/8810308/143513360-1df13169-f487-49a8-9f4d-db91cefbfe4a.png)
+
+
 <p align="center">
-<img src = "https://user-images.githubusercontent.com/8810308/137566609-c8ac5ba1-befa-4eda-a549-5ffaa9b4914a.png" width = "70%">
+<img src = "https://user-images.githubusercontent.com/8810308/143513360-1df13169-f487-49a8-9f4d-db91cefbfe4a.png" width = "70%">
+  <br>
+  <em align="center">image_caption</em>
+</p>
+
+
+<p align="center">
+<img src = "https://user-images.githubusercontent.com/8810308/143513407-606ec764-efaa-4820-baaf-0dbe4cd3aeef.png" width = "70%">
   <br>
   <em align="center">image_caption</em>
 </p>
@@ -36,7 +46,7 @@ The notebooks that reproduce the figures and tables in the paper are as follows
 ---
 ```
 @article{williams2019self,
-  title={Self-assembly of a dimer system},
+  title={Combinatorial model of ligand-receptor binding},
   author={Williams, Mobolaji},
   journal={Physical Review E},
   volume={99},
