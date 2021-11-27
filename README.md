@@ -1,58 +1,47 @@
 # Combinatorial model of ligand-receptor binding
 
-In the self-assembly process which drives the formation of cellular membranes, micelles, and capsids, a collection of separated subunits spontaneously binds together to form functional and more ordered structures. But we can also study self-assembly in a simpler scenario: the formation of dimers from a system of monomers.
+The binding of ligands to receptors is the starting point for many import signal pathways within a cell, but in contrast to the specificity of the processes that follow such bindings, the bindings themselves are often non-specific. Namely, a single type of ligand can often bind to multiple receptors beyond the single receptor to which it binds optimally. This property of ligand-receptor binding naturally leads to a simple question: If a collections of ligands can bind non-specifically to a collection of receptors, but each ligand type has a specific receptor to which it binds most strongly, under what thermal conditions will all ligands bind to their optimal sites?  that is the ligands ligands often bind non-specifically to the collection of receptors in their vicinity. 
 
 
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/8810308/143513360-1df13169-f487-49a8-9f4d-db91cefbfe4a.png" width = "70%">
   <br>
-  <em align="center">image_caption</em>
+  <em align="center">Depiction of various ligand types binding optimally and sub-optimally to receptors</em>
 </p>
 
-The above figure depicts self-assembling biomolecular dimer systems. In (a) distinct single-stranded DNA (ssDNA) strands exist in a system with their complementary strands and with other double-stranded DNA (dsDNA). In (b) transcription factors (TFs) exist in a system with their binding sites on DNA and with already bound TF-DNA dimers. Since the binding sites are embedded in the much longer strand of an entire DNA molecule, the effective DNA molecules to which the TFs bind are much less motile than the TFs. In (c) distinct protein monomers exist in a system with the heterodimers formed from them. In all systems, we consider “fully correct assembly" or “fully correct dimerization" as the state where all monomers are bound to their correct monomer or binding site.
   
+In this repository, we collect all the simulations that helped us explore this question in the [associated paper](https://arxiv.org/pdf/1909.00455.pdf). In particular, to provide a conceptual handle on the features of optimal and sub-optimal bindings of ligands, we considered an analogous model of colors binding to a grid. 
 
 
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/8810308/143513407-606ec764-efaa-4820-baaf-0dbe4cd3aeef.png" width = "70%">
   <br>
-  <em align="center">image_caption</em>
+  <em align="center">Partially correct and completely correct binding for the image</em>
 </p>
   
-  
-The combinatorial problem at the foundation of understanding the statistical physics of such systems is 
-
-  <p align="center">
-<img src = "https://user-images.githubusercontent.com/8810308/113524568-90ef8900-957d-11eb-9ecc-87e6344ca9a0.png" width = "70%">
-  </p>
-  
-By answering the above question, we can formulate a statistical physics model that we can then use to answer questions such as "Under what conditions do the systems defined in the first figure settle into their fully correct configurations?" This question is answered in the [associated paper](https://arxiv.org/pdf/1909.00455.pdf). This repository contains the notebooks that reproduce the results therein. 
+In the same way ligands could have certain receptors to which they bind optimally (even though such ligands could bind to many others), each colored square has a certain correct location in the image grid but could exist anywhere on the grid. We have the correct locations form a simple image so that when simulating the system, it is clear by eye whether the system has settled into its completely correct configuration. In all of the notebooks in this repository, we use this system of grid assembly as a toy model to outline the properties of our ligand-receptor binding model. 
 
 
 ## Reproducing figures and tables
 
-The notebooks that reproduce the figures and tables in the paper are as follows
+Each notebook reproduces a figure in the paper.
 
-- [`degen_factors_checks.ipynb`](https://nbviewer.jupyter.org/github/mowillia/DimerSelfAssembly/blob/master/degen_factors_checks.ipynb): Checks analytical degeneracy factor calculations (in particular answers the dancing couples question); Runs in < 5 secs
-- [`num_soln_sim.ipynb`](https://nbviewer.jupyter.org/github/mowillia/DimerSelfAssembly/blob/master/num_soln_sim.ipynb): Reproduces Figure 4; Runs in ~ 30 minutes
-- [`param_space.ipynb`](https://nbviewer.jupyter.org/github/mowillia/DimerSelfAssembly/blob/master/param_space.ipynb): Reproduces Figure 5; Runs in < 5 secs
-- [`biophys_calc.ipynb`](https://nbviewer.jupyter.org/github/mowillia/DimerSelfAssembly/blob/master/biophys_calc.ipynb): Reproduces computations from Section VI of paper; Runs in < 5 secs
-- [`additional_param_space.ipynb`](https://nbviewer.jupyter.org/github/mowillia/DimerSelfAssembly/blob/master/additional_param_space.ipynb): Reproduces Figure S1 in Supplementary Materials; Runs in < 5 secs
+- [`simple_particle_binding.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/master/simple_particle_binding.ipynb): Reproduces Figure 6; Runs in < 5 secs
+- [`derangement_model.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/master/derangement_model.ipynb): Reproduces Figure 7; Runs in ~ 30 minutes
+- [`general_grid_assembly.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/master/general_grid_assembly.ipynb): Reproduces Figure 8; Runs in < 5 secs
+- [`search_and_combinatorics.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/master/search_and_combinatorics.ipynb): Reproduces Figure 9; Runs in < 5 secs
+- [`hints_non_equilibrium.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/master/hints_non_equilibrium.ipynb): Reproduces Figure 10; Runs in < 3 mins
 
 
 ## References
-[1] Williams, Mobolaji. "Self-assembly of a dimer system." *Physical Review E* 99.4 (2019): 042133.
+[1] Williams, Mobolaji. "Combinatorial model of ligand-receptor binding" *Physical Review E* 99.4 (2019): 042133.
 
 ---
 ```
-@article{williams2019self,
+@article{williams2021large,
   title={Combinatorial model of ligand-receptor binding},
   author={Williams, Mobolaji},
-  journal={Physical Review E},
-  volume={99},
-  number={4},
-  pages={042133},
-  year={2019},
-  publisher={APS}
+  journal={arXiv preprint arXiv:2107.14080},
+  year={2021}
 }
 ```
