@@ -26,11 +26,11 @@ In the same way ligands could have certain receptors to which they bind optimall
 
 Each notebook reproduces a figure in the paper.
 
-- [`simple_particle_binding.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/master/simple_particle_binding.ipynb): Reproduces Figure 6; Runs in < 5 secs
-- [`derangement_model.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/master/derangement_model.ipynb): Reproduces Figure 7; Runs in ~ 30 minutes
-- [`general_grid_assembly.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/master/general_grid_assembly.ipynb): Reproduces Figure 8; Runs in < 5 secs
-- [`search_and_combinatorics.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/master/search_and_combinatorics.ipynb): Reproduces Figure 9; Runs in < 5 secs
-- [`hints_non_equilibrium.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/master/hints_non_equilibrium.ipynb): Reproduces Figure 10; Runs in < 3 mins
+- [`simple_particle_binding.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/main/simple_particle_binding.ipynb): Reproduces Figure 6; Runs in ~ 3 mins
+- [`derangement_model.ipynb`](https://nbviewer.jupyter.org/github/main/LigandReceptor/blob/master/derangement_model.ipynb): Reproduces Figure 7; Runs in ~ 10 mins
+- [`general_grid_assembly.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/main/general_grid_assembly.ipynb): Reproduces Figure 8; Runs in ~ 15 mins
+- [`search_and_combinatorics.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/main/search_and_combinatorics.ipynb): Reproduces Figure 9; Runs in ~ 45 min
+- [`hints_non_equilibrium.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/main/hints_non_equilibrium.ipynb): Reproduces Figure 10; Runs ~ 4 mins
 
 
 ## References
