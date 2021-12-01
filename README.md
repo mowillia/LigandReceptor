@@ -39,7 +39,9 @@ Each notebook reproduces a figure in the paper.
 To simulate the general system (considered in `general_grid_assembly.ipynb`, `search_and_combinatorics.ipynb`, and `hints_non_equilibrium.ipynb`) we defined needed a definition of the microstates, the types of transitions between microstates, and a formula for the probability of transitions.
 
 A microstate of our system was defined by two lists: one representing the collection of unbound particles, and the other representing particles bound to their various binding sites. The particles themselves were denoted by unique strings and came in multiple copies according to the system parameters. For example, for a system with R = 3 types of particles with `n1 = 2`, `n2 = 3`, and `n3 = 1` could have a microstate defined by `unbound_particles = [A2, A2, A3]` and `bound_particles = [A1, −, A2, −, A1, −]` where “−” in the bound list stands for an empty binding site.
+
 Since the number of optimally bound particles was an important observable for the system, we also needed to define the optimal binding configuration for the microstates. Such an optimal configuration was chosen at the start of the simulation and was defined as a microstate with no unbound particles and all the bound par- ticles in a particular order. For example, using the previous example, we might define the optimal binding configuration as `optimal_bound_config = [A1, A1, A2, A2, A2, A3]`, in which case the number of optimally bound particles of each type in `bound_particles=[A1,−,A2,−,A1,−]` is `m1 =1`, `m2 =1`, and `m3 =0`.We note that the order of the elements in unbound particles is not physically important, but since the number of optimally bound particles is an important observable, the order of the elements in bound particles is physically important.
+
 For these simulations, the energy of a microstate with ki bound particles of type i and mi optimally bound particles of type i was defined as
 
 ```
@@ -50,23 +52,23 @@ where `k=(k1,k2,...,,kR)` and `m=(m1,m2,...,mR)` where `gamma[i]` is the binding
 For transitioning between microstates, we allowed for three different transition types: Particle binding to a site; particle unbinding from a site; permutation of two particles in two different binding sites. Particle binding and unbinding both occur in real physical systems, but permutation of particle positions is unphys- ical. This latter transition type was included to ensure an efficient-in-time sampling of the state space. For simulations of equilibrium systems it is fine to include physically unrealistic transition types as long as the associated transition probabilities obey detailed balance.\
 
 At each time step, we randomly selected one of the three transition types with (equal probability for each type), then randomly selected the final proposed microstate given the initial microstate, and finally computed the probability that said proposal was accepted. By the Metropolis Hastings algorithm, the probability that the transition is accepted is given by
-acceptance prob(init → fin) = min
-􏰓 −β(E −Einit) π(fin → init)􏰔
-π(init → fin)
-, (A2)
-1, e fin
- where Einit is the energy of the initial microstate state and Efin is the energy of the final microstate, with energy defined in Eq.(A1). The quantity π(init → fin) is the probability of randomly proposing the final microstate state given the initial microstate state and π(fin → init) is defined similarly. The ratio π(init → fin)/π(fin → init) varied for each transition type. Below we give examples of these transitions along with the value of this ratio in each case. In the following, Nf and Nb represent the number of free particles and the number of bound particles, respectively, before the transition.
-• Particle Binding to Site: One particle was randomly chosen from the unbound particles list and placed in a randomly chosen empty site in the bound particles list. π(init → fin)/π(fin → init) = Nf2/(Nb +1).
+
+```
+prob(init → fin) = min{1, exp(- β(Efin −Einit))*π(fin → init)/π(init → fin) }
+```
+
+where `Einit` is the energy of the initial microstate state and `Efin` is the energy of the final microstate. The quantity `π(init → fin)` is the probability of randomly proposing the final microstate state given the initial microstate state and `π(fin → init)` is defined similarly. The ratio `π(init → fin)/π(fin → init)` varied for each transition type. Below we give examples of these transitions along with the value of this ratio in each case. In the following, `Nf` and `Nb` represent the number of free particles and the number of bound particles, respectively, before the transition.
+- Particle Binding to Site: One particle was randomly chosen from the unbound particles list and placed in a randomly chosen empty site in the bound particles list. `π(init → fin)/π(fin → init) = Nf^2/(Nb +1)`.
 Example: `unbound_particles = [A2, A2, A3]` and `bound_particles = [A1, −, A2, −, A1, −]` →
 `unbound_particles = [A2, A3]` and `bound_particles = [A1, A2, A2, −, A1, −]`; π(init → fin)/π(fin → init) = 9/4
-• Particle Unbinding from Site: One particle was randomly chosen from the bound particles list and placed in the unbound particles list. π(init → fin)/π(fin → init) = Nb/(Nf + 1)2.
+- Particle Unbinding from Site: One particle was randomly chosen from the bound particles list and placed in the unbound particles list. `π(init → fin)/π(fin → init) = Nb/(Nf + 1)^2`.
 Example: `unbound_particles = [A2, A2, A3]` and `bound_particles = [A1, −, A2, −, A1, −]` →
 `unbound_particles = [A2, A2, A3, A2]` and `bound_particles = [A1, −, −, −, A1, −]`;
 π(init → fin)/π(fin → init) = 3/16
-• Particle Permutation: One particle was randomly chosen from the unbound particles list and placed in a randomly chosen empty site in the bound particles list. π(init → fin)/π(fin → init) = 1. Example: `unbound_particles = [A2, A2, A3]` and bound_particles = [A1, −, A2, −, A1, −] →
+- Particle Permutation: One particle was randomly chosen from the unbound particles list and placed in a randomly chosen empty site in the bound particles list. π(init → fin)/π(fin → init) = 1. Example: `unbound_particles = [A2, A2, A3]` and bound_particles = [A1, −, A2, −, A1, −] →
 `unbound_particles = [A2, A2, A3]` and `bound_particles = [A2, −, A1, −, A1, −]`;
-π(init → fin)/π(fin → init) = 1
-For impossible transitions (e.g., particle binding when there are no free particles) the probability for ac- cepting the transition was set to zero. At each temperature, the simulation was run for 40,000 time steps, of which the last 800 run were used to compute ensemble averages of ⟨k⟩ and ⟨m⟩. These simulations were repeated 5 times, and each point in Fig. 6b, Fig. 7b, Fig. 8b, and Fig. 9 represents the average ⟨k⟩ and ⟨m⟩ over these runs. The code used to create these figures is linked to in the Supplementary Code.
+`π(init → fin)/π(fin → init) = 1`
+For impossible transitions (e.g., particle binding when there are no free particles) the probability for accepting the transition was set to zero. At each temperature, the simulation was run for 40,000 time steps, of which the last 800 run were used to compute ensemble averages of `⟨k⟩` and `⟨m⟩`. These simulations were repeated 5 times, and each point in Fig. 6b, Fig. 7b, Fig. 8b, and Fig. 9 represents the average `⟨k⟩` and `⟨m⟩` over these runs. The code used to create these figures is linked to in the Supplementary Code.
 
 
 ## References
