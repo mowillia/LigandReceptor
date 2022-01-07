@@ -65,7 +65,7 @@ Example: `unbound_particles = [A2, A2, A3]` and `bound_particles = [A1, −, A2,
 Example: `unbound_particles = [A2, A2, A3]` and `bound_particles = [A1, −, A2, −, A1, −]` →
 `unbound_particles = [A2, A2, A3, A2]` and `bound_particles = [A1, −, −, −, A1, −]`;
 π(init → fin)/π(fin → init) = 3/16
-- **Particle Permutation:** One particle was randomly chosen from the unbound particles list and placed in a randomly chosen empty site in the bound particles list. π(init → fin)/π(fin → init) = 1. Example: `unbound_particles = [A2, A2, A3]` and bound_particles = [A1, −, A2, −, A1, −] →
+- **Particle Permutation:** Two randomly selected particles in the `bound_particles` list switched positions.  π(init → fin)/π(fin → init) = 1. Example: `unbound_particles = [A2, A2, A3]` and bound_particles = [A1, −, A2, −, A1, −] →
 `unbound_particles = [A2, A2, A3]` and `bound_particles = [A2, −, A1, −, A1, −]`;
 `π(init → fin)/π(fin → init) = 1`
 For impossible transitions (e.g., particle binding when there are no free particles) the probability for accepting the transition was set to zero. At each temperature, the simulation was run for 40,000 time steps, of which the last 800 run were used to compute ensemble averages of ⟨k⟩ and ⟨m⟩. These simulations were repeated 5 times, and each point in Fig. 6b, Fig. 7b, Fig. 8b, and Fig. 9 represents the average ⟨k⟩ and ⟨m⟩ over these runs. The code used to create these figures is linked to in the Supplementary Code.
