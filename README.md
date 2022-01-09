@@ -36,7 +36,9 @@ Each notebook reproduces a figure in the paper.
 
 ## Simulation Scheme
 
-For these simulations, we needed to define a microstate, the types of transitions between microstates, and the probability of transitions between microstates. 
+For these simulations, we needed to define a microstate,  the probability of transitions between microstates, and the types of transitions between microstates.
+
+**Microstate Definition**
 
 A microstate of our system was defined by two lists: one representing the collection of unbound particles, and the other representing particles bound to their various binding sites. The particles themselves were denoted by unique strings and came in multiple copies according to the system parameters. For example, for a system with R = 3 types of particles with `n1 = 2`, `n2 = 3`, and `n3 = 1` could have a microstate defined by `unbound_particles = [A2, A2, A3]` and `bound_particles = [A1, −, A2, −, A1, −]` where “−” in the bound list stands for an empty binding site.
 
@@ -51,6 +53,8 @@ E(k, m) = Sum^R_i (m[i] log delta[i] + k[i] log gamma[i])
 where `k=(k1,k2,...,,kR)` and `m=(m1,m2,...,mR)` where `gamma[i]` is the binding affinity and `delta[i]` is the optimal binding affinity of particle of type `i`.
 For transitioning between microstates, we allowed for three different transition types: Particle binding to a site; particle unbinding from a site; permutation of two particles in two different binding sites. Particle binding and unbinding both occur in real physical systems, but permutation of particle positions is unphys- ical. This latter transition type was included to ensure an efficient-in-time sampling of the state space. For simulations of equilibrium systems it is fine to include physically unrealistic transition types as long as the associated transition probabilities obey detailed balance.
 
+**Transition Probability**
+
 At each time step, we randomly selected one of the three transition types with (equal probability for each type), then randomly selected the final proposed microstate given the initial microstate, and finally computed the probability that said proposal was accepted. By the Metropolis Hastings algorithm, the probability that the transition is accepted is given by
 
 ```
@@ -58,6 +62,9 @@ prob(init → fin) = min{1, exp(- β(Efin −Einit))*π(fin → init)/π(init �
 ```
 
 where `Einit` is the energy of the initial microstate state and `Efin` is the energy of the final microstate. The quantity `π(init → fin)` is the probability of randomly proposing the final microstate state given the initial microstate state and `π(fin → init)` is defined similarly. The ratio `π(init → fin)/π(fin → init)` varied for each transition type. Below we give examples of these transitions along with the value of this ratio in each case. In the following, `Nf` and `Nb` represent the number of free particles and the number of bound particles, respectively, before the transition.
+
+**Types of transitions
+
 - **Particle Binding to Site:** One particle was randomly chosen from the unbound particles list and placed in a randomly chosen empty site in the bound particles list. `π(init → fin)/π(fin → init) = Nf^2/(Nb +1)`.
 Example: `unbound_particles = [A2, A2, A3]` and `bound_particles = [A1, −, A2, −, A1, −]` →
 `unbound_particles = [A2, A3]` and `bound_particles = [A1, A2, A2, −, A1, −]`; `π(init → fin)/π(fin → init) = 9/4`
