@@ -80,7 +80,7 @@ Example: `unbound_particles = [A2, A2, A3]` and bound_particles = [A1, −, A2, 
 `unbound_particles = [A2, A2, A3]` and `bound_particles = [A2, −, A1, −, A1, −]`;
 `π(fin → init)/π(init → fin) = 1`
 
-For impossible transitions (e.g., particle binding when there are no free particles) the probability for accepting the transition was set to zero. At each temperature, the simulation was run for anywhere from 10,000 to 30,000 time steps (depending on convergence properties), of which the last 2.5% of steps were used to compute ensemble averages of ⟨k⟩ and ⟨m⟩. These simulations were repeated 5 times, and each point in Fig. 6b, Fig. 7b, Fig. 8b, and Fig. 9 in the paper represents the average ⟨k⟩ and ⟨m⟩ over these runs. 
+For impossible transitions (e.g., particle binding when there are no free particles) the probability for accepting the transition was set to zero. At each temperature, the simulation was run for anywhere from 10,000 to 30,000 time steps (depending on convergence properties), of which the last 2.5% of steps were used to compute ensemble averages of ⟨k⟩ and ⟨m⟩. These simulations were repeated five times, and each point in Fig. 6b, Fig. 7b, Fig. 8b, and Fig. 9 in the paper represents the average ⟨k⟩ and ⟨m⟩ over these five runs. 
 
 
 ## References
