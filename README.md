@@ -29,7 +29,7 @@ In the same way ligands could have certain receptors to which they bind optimall
 Each notebook reproduces a figure in the paper.
 
 - [`simple_particle_binding.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/main/simple_particle_binding.ipynb): Reproduces Figure 6; Runs in ~ 3 mins
-- [`derangement_model.ipynb`](https://nbviewer.jupyter.org/github/main/LigandReceptor/blob/master/derangement_model.ipynb): Reproduces Figure 7; Runs in ~ 10 mins
+- [`derangement_model.ipynb`](https://nbviewer.jupyter.org/github/main/LigandReceptor/blob/main/derangement_model.ipynb): Reproduces Figure 7; Runs in ~ 10 mins
 - [`general_grid_assembly.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/main/general_grid_assembly.ipynb): Reproduces Figure 8; Runs in ~ 15 mins
 - [`search_and_combinatorics.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/main/search_and_combinatorics.ipynb): Reproduces Figure 9; Runs in ~ 45 min
 - [`hints_non_equilibrium.ipynb`](https://nbviewer.jupyter.org/github/mowillia/LigandReceptor/blob/main/hints_non_equilibrium.ipynb): Reproduces Figure 10; Runs ~ 4 mins
@@ -80,7 +80,7 @@ Example: `unbound_particles = [A2, A2, A3]` and bound_particles = [A1, −, A2, 
 `unbound_particles = [A2, A2, A3]` and `bound_particles = [A2, −, A1, −, A1, −]`;
 `π(fin → init)/π(init → fin) = 1`
 
-For impossible transitions (e.g., particle binding when there are no free particles) the probability for accepting the transition was set to zero. At each temperature, the simulation was run for anywhere from 10,000 to 40,000 time steps (depending on convergence properties), of which the last 800 run were used to compute ensemble averages of ⟨k⟩ and ⟨m⟩. These simulations were repeated 5 times, and each point in Fig. 6b, Fig. 7b, Fig. 8b, and Fig. 9 in the paper represents the average ⟨k⟩ and ⟨m⟩ over these runs. 
+For impossible transitions (e.g., particle binding when there are no free particles) the probability for accepting the transition was set to zero. At each temperature, the simulation was run for anywhere from 10,000 to 30,000 time steps (depending on convergence properties), of which the last 5% of steps were used to compute ensemble averages of ⟨k⟩ and ⟨m⟩. These simulations were repeated 5 times, and each point in Fig. 6b, Fig. 7b, Fig. 8b, and Fig. 9 in the paper represents the average ⟨k⟩ and ⟨m⟩ over these runs. 
 
 
 ## References
