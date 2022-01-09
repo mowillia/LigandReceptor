@@ -2,7 +2,7 @@
 
 The binding of ligands to receptors is the starting point for many import signal pathways within a cell, but in contrast to the specificity of the processes that follow such bindings, the bindings themselves are often non-specific. Namely, a single type of ligand can often bind to multiple receptors beyond the single receptor to which it binds optimally. This property of ligand-receptor binding naturally leads to a simple question:
 
->If a collections of ligands can bind non-specifically to a collection of receptors, but each ligand type has a specific receptor to which it binds most strongly, under what thermal conditions will all ligands bind to their optimal sites? 
+>If a collection of ligands can bind non-specifically to a collection of receptors, but each ligand type has a specific receptor to which it binds most strongly, under what thermal conditions will all ligands bind to their optimal sites? 
 
 
 <p align="center">
