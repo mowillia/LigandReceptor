@@ -21,7 +21,7 @@ In this repository, we collect all the simulations that helped us explore this q
   <em align="center">Partially correct and completely correct binding for the image</em>
 </p>
   
-In the same way ligands could have certain receptors to which they bind optimally (even though such ligands could bind to many others), each colored square has a certain correct location in the image grid but could exist anywhere on the grid. We have the correct locations form a simple image so that when simulating the system, it is clear by eye whether the system has settled into its completely correct configuration. In all of the notebooks in this repository, we use this system of grid assembly as a toy model to outline the properties of our ligand-receptor binding model. 
+In the same way ligands could have certain receptors to which they bind optimally (even though such ligands could bind to many others), each colored square has a certain correct location in the image grid but could exist anywhere on the grid. We have the correct locations form a simple image so that, when simulating the system, it is clear by eye whether the system has settled into its completely correct configuration. In all of the notebooks in this repository, we use this system of grid assembly as a toy model to outline the properties of our ligand-receptor binding model. 
 
 
 ## Reproducing figures and tables
