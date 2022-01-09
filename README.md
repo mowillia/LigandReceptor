@@ -36,7 +36,7 @@ Each notebook reproduces a figure in the paper.
 
 ## Simulation Scheme
 
-To simulate the general system (considered in `general_grid_assembly.ipynb`, `search_and_combinatorics.ipynb`, and `hints_non_equilibrium.ipynb`) we defined needed a definition of the microstates, the types of transitions between microstates, and a formula for the probability of transitions.
+For these simulations, we needed to define a microstate, the types of transitions between microstates, and the probability of transitions between microstates. 
 
 A microstate of our system was defined by two lists: one representing the collection of unbound particles, and the other representing particles bound to their various binding sites. The particles themselves were denoted by unique strings and came in multiple copies according to the system parameters. For example, for a system with R = 3 types of particles with `n1 = 2`, `n2 = 3`, and `n3 = 1` could have a microstate defined by `unbound_particles = [A2, A2, A3]` and `bound_particles = [A1, −, A2, −, A1, −]` where “−” in the bound list stands for an empty binding site.
 
