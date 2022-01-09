@@ -63,7 +63,7 @@ prob(init → fin) = min{1, exp(- β(Efin −Einit))*π(fin → init)/π(init �
 
 where `Einit` is the energy of the initial microstate state and `Efin` is the energy of the final microstate. The quantity `π(init → fin)` is the probability of randomly proposing the final microstate state given the initial microstate state and `π(fin → init)` is defined similarly. The ratio `π(init → fin)/π(fin → init)` varied for each transition type. Below we give examples of these transitions along with the value of this ratio in each case. In the following, `Nf` and `Nb` represent the number of free particles and the number of bound particles, respectively, before the transition.
 
-**Types of transitions
+**Types of Transitions**
 
 - **Particle Binding to Site:** One particle was randomly chosen from the unbound particles list and placed in a randomly chosen empty site in the bound particles list. `π(init → fin)/π(fin → init) = Nf^2/(Nb +1)`.
 Example: `unbound_particles = [A2, A2, A3]` and `bound_particles = [A1, −, A2, −, A1, −]` →
