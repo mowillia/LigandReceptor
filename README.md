@@ -76,7 +76,7 @@ Example: `unbound_particles = [A2, A2, A3]` and `bound_particles = [A1, −, A2,
 `π(fin → init)/π(init → fin) = 3/16`
 - **Particle Permutation:** Two randomly selected particles in the `bound_particles` list switched positions.  `π(fin → init)/π(init → fin) = 1`.
 
-Example: `unbound_particles = [A2, A2, A3]` and bound_particles = [A1, −, A2, −, A1, −] →
+Example: `unbound_particles = [A2, A2, A3]` and `bound_particles = [A1, −, A2, −, A1, −]` →
 `unbound_particles = [A2, A2, A3]` and `bound_particles = [A2, −, A1, −, A1, −]`;
 `π(fin → init)/π(init → fin) = 1`
 
