@@ -12,7 +12,7 @@ The binding of ligands to receptors is the starting point for many import signal
 </p>
 
   
-In this repository, we collect all the simulations that helped us explore this question in the [associated paper](https://arxiv.org/pdf/XYXY.XXXX.pdf). In particular, to provide a conceptual handle on the features of optimal and sub-optimal bindings of ligands, we considered an analogous model of colors binding to a grid. 
+In this repository, we collect all the simulations that helped us explore this question in the [associated paper](http://arxiv.org/abs/2201.09471). In particular, to provide a conceptual handle on the features of optimal and sub-optimal bindings of ligands, we considered an analogous model of colors binding to a grid. 
 
 
 <p align="center">
@@ -85,14 +85,14 @@ For impossible transitions (e.g., particle binding when there are no free partic
 
 ## References
 
-[1] Mobolaji Williams. "Combinatorial model of ligand-receptor binding." *Journal Name.* 2021. [[arxiv]](https://arxiv.org/abs/XYXY.XXXX)
+[1] Mobolaji Williams. "Combinatorial model of ligand-receptor binding." *Journal Name.* 2021. [[http://arxiv.org/abs/2201.09471]](http://arxiv.org/abs/2201.09471)
 
 ---
 ```
-@article{williams2021large,
+@article{williams2022comb,
   title={Combinatorial model of ligand-receptor binding},
   author={Williams, Mobolaji},
-  journal={arXiv preprint arXiv:XYXY.XXXX},
-  year={2021}
+  journal={arXiv preprint arXiv:2201.09471},
+  year={2022}
 }
 ```
