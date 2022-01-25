@@ -85,7 +85,7 @@ For impossible transitions (e.g., particle binding when there are no free partic
 
 ## References
 
-[1] Mobolaji Williams. "Combinatorial model of ligand-receptor binding." *Journal Name.* 2021. [[http://arxiv.org/abs/2201.09471]](http://arxiv.org/abs/2201.09471)
+[1] Mobolaji Williams. "Combinatorial model of ligand-receptor binding." 2022. [[http://arxiv.org/abs/2201.09471]](http://arxiv.org/abs/2201.09471)
 
 ---
 ```
