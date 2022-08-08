@@ -1,4 +1,4 @@
-# Combinatorial model of ligand-receptor binding
+# Derangement model of ligand-receptor binding
 
 The binding of ligands to receptors is the starting point for many import signal pathways within a cell, but in contrast to the specificity of the processes that follow such bindings, the bindings themselves are often non-specific. Namely, a single type of ligand can often bind to multiple receptors beyond the single receptor to which it binds optimally. This property of ligand-receptor binding naturally leads to a simple question:
 
